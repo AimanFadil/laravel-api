@@ -18,4 +18,14 @@ class ProjectController extends Controller
             'results' => $projects
         ]);
     }
+
+    public function show($slug)
+    {
+
+        $project = Project::all()->where('slug', $slug);
+        return response()->json([
+            'success' => true,
+            'project' => $project
+        ]);
+    }
 }
