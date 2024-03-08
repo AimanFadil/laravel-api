@@ -21,7 +21,7 @@ class LeadController extends Controller
             'cognome' => 'required|max:40',
             'cell' => 'required|max:25',
             'email' => 'required|max:150',
-            'meassaggio' => 'required'
+            'messaggio' => 'required'
         ]);
 
         if ($validator->fails()) {
